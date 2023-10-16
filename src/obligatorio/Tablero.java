@@ -359,7 +359,61 @@ public class Tablero {
         }
         System.out.println("+");
     }
-} 
     
+}
+    
+    public static void imprimirDosTableros(Tablero tableroAntiguo, Tablero tableroNuevo) {
+
+    System.out.print("   ");
+    for (int col = 1; col <= tableroAntiguo.cols; col++) {
+        System.out.print(col + "   ");
+    }
+    System.out.print("  ==>    ");
+    for (int col = 1; col <= tableroNuevo.cols; col++) {
+        System.out.print(col + "   ");
+    }
+    System.out.println();
+
+    System.out.print("   ");
+    for (int j = 0; j < tableroAntiguo.cols; j++) {
+        System.out.print("+---");
+    }
+    System.out.print("+   ==>      ");
+    for (int j = 0; j < tableroNuevo.cols; j++) {
+        System.out.print("+---");
+    }
+    System.out.println("+");
+
+    for (int i = 0; i < tableroAntiguo.filas; i++) {
+        System.out.print((i + 1) + " ");
+
+        System.out.print("| ");
+        for (int j = 0; j < tableroAntiguo.cols; j++) {
+            System.out.print(tableroAntiguo.celda[i][j] + " | ");
+        }
+
+        System.out.print("  ==>  ");
+
+        System.out.print((i + 1) + " ");
+
+        System.out.print("| ");
+        for (int j = 0; j < tableroNuevo.cols; j++) {
+            System.out.print(tableroNuevo.celda[i][j] + " | ");
+        }
+        System.out.println();
+
+        System.out.print("  ");
+        for (int j = 0; j < tableroAntiguo.cols; j++) {
+            System.out.print("+---");
+        }
+
+        System.out.print("+  ==>  ");
+
+        for (int j = 0; j < tableroNuevo.cols; j++) {
+            System.out.print("+---");
+        }
+        System.out.println("+");
+    }
+}
     
 }
