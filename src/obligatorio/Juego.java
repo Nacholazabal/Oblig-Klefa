@@ -83,7 +83,7 @@ public class Juego {
 
                 Movimiento.realizarMovimiento(movimiento, tablero);
                 
-                Tablero.imprimirTablero(tablero);
+                Tablero.imprimirDosTableros(tablero, tabero);
                 
                  if(juegoResuelto(tablero)){
                      juegoTerminado = true;
@@ -96,7 +96,7 @@ public class Juego {
                 if(movimiento.equalsIgnoreCase("-1 -1")){
                     Movimiento.retrocederMovimiento(tablero.movimientos, tablero);
                     
-                    Tablero.imprimirTablero(tablero);
+                    Tablero.imprimirDosTableros(tablero, tabero);
                     
                 } else{
                     System.out.println("Movimiento inválido. Intente nuevamente.");
